@@ -1,0 +1,2 @@
+idx,name,pattern,level,pen,seed,departSpeed,nCAV,nHDV,tripCAV,tripHDV,collisions,warnCAV,redViol,yellowCross,wasted,jStops,cannotStop,minH,cutins,ratio,uMinSteps,cmdSteps,nOpt,optWallMean,optWallMax,maxQueue,safetyPASS,effFlag
+48,M48_oneheavy_heavy_pen50_seed101,oneheavy,heavy,0.50,101,0,46,48,106.6,100.9,0,0,0,0,0,2,0,-0.01,45,1.000,340,29410,29,0.03,0.18,[4 11 5 3 4 0 3 0],0,1

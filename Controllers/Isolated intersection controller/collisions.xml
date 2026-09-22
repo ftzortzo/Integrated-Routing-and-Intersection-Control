@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-09-22T02:00:48.199330-05:00 by Eclipse SUMO GUI 1.26.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\Filippos\Desktop\CDC 2026\Simple example matlab.v2\Controllers\Isolated intersection controller\quickstart.net.xml"/>
+        <route-files value="C:\Users\Filippos\Desktop\CDC 2026\Simple example matlab.v2\Controllers\Isolated intersection controller\quickstart.rou.xml"/>
+    </input>
+
+    <output>
+        <collision-output value="C:\Users\Filippos\Desktop\CDC 2026\Simple example matlab.v2\Controllers\Isolated intersection controller\collisions.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="5000"/>
+        <step-length value="0.1"/>
+    </time>
+
+    <processing>
+        <step-method.ballistic value="true"/>
+        <collision.action value="warn"/>
+        <collision.check-junctions value="true"/>
+        <time-to-teleport value="-1"/>
+    </processing>
+
+    <report>
+        <log value="C:\Users\Filippos\Desktop\CDC 2026\Simple example matlab.v2\Controllers\Isolated intersection controller\sumo_log.txt"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="1234"/>
+        <num-clients value="1"/>
+    </traci_server>
+
+    <random_number>
+        <seed value="101"/>
+    </random_number>
+
+    <gui_only>
+        <gui-settings-file value="C:\Users\Filippos\Desktop\CDC 2026\Simple example matlab.v2\Controllers\Isolated intersection controller\gui-settings.xml"/>
+        <start value="true"/>
+        <delay value="1"/>
+    </gui_only>
+
+</sumoConfiguration>

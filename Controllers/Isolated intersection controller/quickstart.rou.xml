@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+  <!-- vType definitions. HDV: as written by generate_rou_xml.m in the Sioux Falls
+       (network) code. CAV: made consistent with the controller so that hand-back
+       to SUMO after crossing is smooth: tau = T_safe (0.5 s), minGap = s0 (2.0 m),
+       accel = u_max (5.0 m/s^2), decel = emergencyDecel = |u_min| (6.0 m/s^2) so that
+       SUMO never drives the CAV into a state the controller cannot brake out of,
+       speedFactor = 1 with speedDev = 0 (no random driver factor; speedFactor alone
+       driver factor; speedFactor alone only sets the mean, the default deviation
+       0.1 would still apply).
+       (Original network values: accel=10, minGap=2.5, tau default 1.0.) -->
+  <vType id="CAV" accel="5.0" decel="6.0" emergencyDecel="6.0" length="5" minGap="2.0" tau="0.5" maxSpeed="50.0" speedFactor="1.0" speedDev="0" sigma="0.5" color="1,0,0" carFollowModel="IDM"/>
+  <vType id="HDV" accel="3.0" decel="6.0" length="5" minGap="2.5" maxSpeed="50.0" sigma="0.5" color="0,0.6,1" carFollowModel="IDM"/>
+
+    <route id="routeNE" edges="NC CE"/>
+  <route id="routeNS" edges="NC CS"/>
+  <route id="routeNW" edges="NC CW"/>
+  <route id="routeEN" edges="EC CN"/>
+  <route id="routeES" edges="EC CS"/>
+  <route id="routeEW" edges="EC CW"/>
+  <route id="routeSN" edges="SC CN"/>
+  <route id="routeSE" edges="SC CE"/>
+  <route id="routeSW" edges="SC CW"/>
+  <route id="routeWN" edges="WC CN"/>
+  <route id="routeWE" edges="WC CE"/>
+  <route id="routeWS" edges="WC CS"/>
+
+  <!-- scenario: S8 leaderPred model -->
+  <flow id="hdv_ns" type="HDV" route="routeNS" begin="0" end="3600" vehsPerHour="250" departLane="best" departSpeed="0"/>
+  <flow id="cav_ns" type="CAV" route="routeNS" begin="0" end="3600" vehsPerHour="250" departLane="best" departSpeed="0"/>
+  <flow id="hdv_sn" type="HDV" route="routeSN" begin="0" end="3600" vehsPerHour="250" departLane="best" departSpeed="0"/>
+  <flow id="cav_sn" type="CAV" route="routeSN" begin="0" end="3600" vehsPerHour="250" departLane="best" departSpeed="0"/>
+  <flow id="hdv_ew" type="HDV" route="routeEW" begin="0" end="3600" vehsPerHour="250" departLane="best" departSpeed="0"/>
+  <flow id="cav_ew" type="CAV" route="routeEW" begin="0" end="3600" vehsPerHour="250" departLane="best" departSpeed="0"/>
+  <flow id="hdv_we" type="HDV" route="routeWE" begin="0" end="3600" vehsPerHour="250" departLane="best" departSpeed="0"/>
+  <flow id="cav_we" type="CAV" route="routeWE" begin="0" end="3600" vehsPerHour="250" departLane="best" departSpeed="0"/>
+  <flow id="hdv_ne" type="HDV" route="routeNE" begin="0" end="3600" vehsPerHour="100" departLane="best" departSpeed="0"/>
+  <flow id="cav_ne" type="CAV" route="routeNE" begin="0" end="3600" vehsPerHour="100" departLane="best" departSpeed="0"/>
+  <flow id="hdv_es" type="HDV" route="routeES" begin="0" end="3600" vehsPerHour="100" departLane="best" departSpeed="0"/>
+  <flow id="cav_es" type="CAV" route="routeES" begin="0" end="3600" vehsPerHour="100" departLane="best" departSpeed="0"/>
+</routes>

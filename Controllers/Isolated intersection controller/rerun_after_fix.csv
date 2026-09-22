@@ -1,0 +1,3 @@
+idx,name,pattern,level,pen,seed,departSpeed,nCAV,nHDV,tripCAV,tripHDV,collisions,warnCAV,redViol,yellowCross,wasted,jStops,cannotStop,minH,ratio,uMinSteps,cmdSteps,nOpt,optWallMean,optWallMax,maxQueue,PASS
+16,M16_straight4_heavy_pen100_seed101,straight4,heavy,1.00,101,0,178,0,81.3,NaN,0,0,0,4,0,0,0,0.44,1.000,880,43022,51,0.38,17.49,[1 0 0 0 1 0 0 0],0
+28,M28_turnmix_moderate_pen100_seed202,turnmix,moderate,1.00,202,max,100,0,82.0,NaN,0,0,0,0,2,0,0,0.02,1.000,566,28368,46,0.02,0.14,[0 1 1 0 0 1 1 0],0
